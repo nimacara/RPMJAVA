@@ -13,7 +13,7 @@ color white = color(255, 255, 255);
 color red = color(255, 0, 0);
 color green = color(0, 255, 0);
 color blue = color(0, 0, 255);
-int brightness = 0;
+int aumento = 0;
 
 boolean overRect = false; //Estado del mouse si está encima de rect o no
  
@@ -64,11 +64,11 @@ for (int i = 0; i < 256; i++) {
   {
     if (ypos > 0 && ypos <= 50) {
       // brightness
-      brightness = xpos;
+      aumento = xpos-128;
       text("Aumento =",590,300);
-      text(xpos, 720, 300);
+      text(aumento, 720, 300);
       
-      port.write(brightness);
+      port.write(aumento);
       } 
   }
  
